@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AppMotivation</string>
+    <string name="ic_infinito">Icone Infinito</string>
+    <string name="ic_smile">Icone Smile</string>
+    <string name="ic_sun">Icone Sun</string>
+    <string name="saudacao_Name">Olá,Kotlin!</string>
+    <string name="Frase">Riscos devem ser corridos, porque o maior perigo é não arriscar nada!</string>
+    <string name="button_new">NOVA FRASE</string>
 </resources>

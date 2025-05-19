@@ -8,16 +8,86 @@
     tools:context=".FrasesActivity">
 
     <View
+        android:id="@+id/view_backgroundTitle"
         android:layout_width="match_parent"
-        android:layout_height="48dp"/>
+        android:layout_height="72dp"
+        android:background="@color/BlueDaises" />
+
+    <ImageView
+        android:id="@+id/imageView_icInfinity"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/view_backgroundTitle"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/ic_infinito"
+        android:src="@drawable/ic_infinity" />
+
+    <ImageView
+        android:id="@+id/imageView_icSmile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/view_backgroundTitle"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/imageView_icInfinity"
+        android:contentDescription="@string/ic_smile"
+        android:src="@drawable/ic_smile" />
+
+    <ImageView
+        android:id="@+id/imageView_icSun"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/view_backgroundTitle"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/imageView_icSmile"
+        android:contentDescription="@string/ic_sun"
+        android:src="@drawable/ic_sun" />
 
     <TextView
+        android:id="@+id/textView_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/view_backgroundTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/saudacao_Name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_Frases"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:hint="@string/Frase"
+        android:textStyle="bold|italic" />
+
+    <View
+        android:id="@+id/view_division"
+        android:layout_below="@id/textView_Frases"
+        android:layout_marginTop="20dp"
+        android:layout_width="120dp"
+        android:layout_height="3dp"
+        android:background="@color/BlueDaises"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="155dp"/>
+
+    <Button
+        android:id="@+id/button_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_new"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+        />
+
 
 </RelativeLayout>
