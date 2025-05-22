@@ -25,10 +25,21 @@ class FrasesActivity : AppCompatActivity(), View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.buttonNew.setOnClickListener(this)
+      setListeners()
+    }
+    override fun onClick(v: View) {
+        if (v.id == R.id.button_new){
+            handleNewPhrase()
+        }
+
+    }
+    private fun handleNewPhrase(){
+
     }
 
-    override fun onClick(v: View) {
-        TODO("Not yet implemented")
-    }
+  private fun setListeners(){
+      binding.buttonNew.setOnClickListener(this)
+  }
+
+
 }

@@ -76,6 +76,7 @@
         android:layout_below="@id/textView_Frases"
         android:layout_centerHorizontal="true"
         android:background="@color/BlueDaises"
+        android:layout_marginTop="6dp"
         android:elevation="4dp"/>
 
     <Button
