@@ -6,4 +6,5 @@
     <string name="saudacao_Name">Olá,Kotlin!</string>
     <string name="Frase">Riscos devem ser corridos, porque o maior perigo é não arriscar nada!</string>
     <string name="button_new">NOVA FRASE</string>
+    <string name="phrase_inity">Vamos começar?</string>
 </resources>

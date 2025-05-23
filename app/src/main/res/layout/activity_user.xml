@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity"
+    android:background="@color/BlueDaises">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phrase_inity"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:layout_marginTop="42dp"
+        android:textColor="@color/white"
+        />
+
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+       android:text="Qual é o sue nome?"
+       android:gravity="center"
+       android:layout_margin="16dp"
+       android:textColor="@color/white"
+       android:textSize="20sp"
+       />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SALVAR"
+        android:textColor="@color/BlueDaises"
+       android:backgroundTint="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="38dp"/>
+
+  </RelativeLayout>

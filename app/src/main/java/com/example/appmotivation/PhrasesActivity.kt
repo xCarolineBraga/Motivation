@@ -6,18 +6,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.appmotivation.databinding.ActivityFrasesBinding
+import com.example.appmotivation.databinding.ActivityPhrasesBinding
 
 
-class FrasesActivity : AppCompatActivity(), View.OnClickListener {
+class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var binding: ActivityFrasesBinding
+    private lateinit var binding: ActivityPhrasesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityFrasesBinding.inflate(layoutInflater)
+        binding = ActivityPhrasesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -33,6 +33,7 @@ class FrasesActivity : AppCompatActivity(), View.OnClickListener {
         }
 
     }
+
     private fun handleNewPhrase(){
 
     }
