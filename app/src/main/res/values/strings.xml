@@ -7,4 +7,6 @@
     <string name="Frase">Riscos devem ser corridos, porque o maior perigo é não arriscar nada!</string>
     <string name="button_new">NOVA FRASE</string>
     <string name="phrase_inity">Vamos começar?</string>
+    <string name="nome">Qual é o seu nome?</string>
+    <string name="button_salvar">SALVAR</string>
 </resources>
