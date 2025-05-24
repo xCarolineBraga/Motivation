@@ -2,6 +2,7 @@ package com.example.appmotivation.ui
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,7 +31,17 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         if (v.id == R.id.button_save) {
-            handleSave()
+
+            val nome = binding.editTextName.text.toString()
+
+            if (nome.isNotEmpty()){
+
+                handleSave()
+
+            }else{
+                Toast.makeText(this,R.string.name_notification,Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 

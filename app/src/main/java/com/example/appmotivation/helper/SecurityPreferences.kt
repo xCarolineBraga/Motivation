@@ -3,6 +3,7 @@ package com.example.appmotivation.helper
 import android.content.Context
 
 class SecurityPreferences(context: Context)  {
+
     private val shared = context.getSharedPreferences("Motivation", Context.MODE_PRIVATE)
 
     fun storeString(key:String,value:String){

@@ -9,4 +9,5 @@
     <string name="phrase_inity">Vamos começar?</string>
     <string name="nome">Qual é o seu nome?</string>
     <string name="button_salvar">SALVAR</string>
+    <string name="name_notification">Informe seu nome!</string>
 </resources>
