@@ -14,7 +14,9 @@ import com.example.appmotivation.databinding.ActivityUserBinding
 import com.example.appmotivation.helper.SecurityPreferences
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
+
     private lateinit var binding: ActivityUserBinding
+    private lateinit var securityPreferences: SecurityPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,44 +25,42 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        securityPreferences = SecurityPreferences(this)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         setListeners()
     }
 
     override fun onClick(v: View) {
         if (v.id == R.id.button_save) {
-
-            val nome = binding.editTextName.text.toString()
-
-            if (nome.isNotEmpty()){
-
-                handleSave()
-                SecurityPreferences(this).storeString("Motivation",nome)
-
-                val intent = Intent(this,PhrasesActivity::class.java)
-                intent.putExtra(AppConstants.KEY_NAME,nome)
-                startActivity(intent)
-
-
-            }else{
-                Toast.makeText(this,R.string.name_notification,Toast.LENGTH_SHORT).show()
-            }
-
+            handleSave()
         }
     }
 
     private fun handleSave() {
-        SecurityPreferences(this)
+        val nome = binding.editTextName.text.toString()
 
+        if (nome.isNotEmpty()){
+
+            securityPreferences.storeString(AppConstants.Key.PERSON_NAME,nome)
+            //salvando o nome
+
+            val intent = Intent(this,PhrasesActivity::class.java)
+            startActivity(intent)
+            finish()
+
+
+        }else{
+            Toast.makeText(this,R.string.name_notification,Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setListeners() {
         binding.buttonSave.setOnClickListener(this)
     }
-
-
 }

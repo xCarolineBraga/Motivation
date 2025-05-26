@@ -9,11 +9,13 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.appmotivation.AppConstants
 import com.example.appmotivation.R
 import com.example.appmotivation.databinding.ActivityPhrasesBinding
+import com.example.appmotivation.helper.SecurityPreferences
 
 
 class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityPhrasesBinding
+    private lateinit var securityPreferences: SecurityPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,17 +24,15 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityPhrasesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        securityPreferences = SecurityPreferences(this)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
         setListeners()
-
-        var saveName = getName()
-        var name1 = binding.textViewName.text.toString()
-        name1 = saveName.toString()
-
+        getUserName()
     }
 
 
@@ -53,11 +53,10 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
         binding.buttonNew.setOnClickListener(this)
     }
 
-    private fun getName() {
+    private fun getUserName() {
         // função para recuperação de intents
-        intent.extras?.let {
-            binding.textViewName.text = it.getString(AppConstants.KEY_NAME)
-        }
+       val nome = securityPreferences.getString(AppConstants.Key.PERSON_NAME)
+        binding.textViewName.text = nome
 
     }
 }
