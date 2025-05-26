@@ -16,7 +16,7 @@
         android:background="@color/BlueDaises" />
 
     <ImageView
-        android:id="@+id/imageView_icInfinity"
+        android:id="@+id/imageView_icAll"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignTop="@id/view_backgroundTitle"
@@ -36,7 +36,7 @@
         android:src="@drawable/ic_smile" />
 
     <ImageView
-        android:id="@+id/imageView_icSun"
+        android:id="@+id/imageView_icSunny"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignBottom="@id/view_backgroundTitle"

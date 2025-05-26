@@ -1,0 +1,38 @@
+package com.example.appmotivation
+
+import com.example.appmotivation.constants.AppConstants
+
+data class Phrase(val description: String, val category: Int)
+
+class PhraseRepository {
+
+    private val all = AppConstants.Phrases.ALL
+    private val happy = AppConstants.Phrases.SMILE
+    private val sunny = AppConstants.Phrases.SUNNY
+
+    private val listPhrase: List<Phrase> = listOf(
+        Phrase("Não sabendo que era impossível, foi lá e fez.", happy),
+        Phrase("Coisas grandes são feitas de um monte de coisinhas.",happy),
+        Phrase("Se houver risco de felicidade, arrisque-se",happy),
+        Phrase("Você não é derrotado quando perde, você é derrotado quando desiste!", happy),
+        Phrase("Quando está mais escuro, vemos mais estrelas!", happy),
+        Phrase("Insanidade é fazer sempre a mesma coisa e esperar um resultado diferente.", happy),
+        Phrase("Não pare quando estiver cansado, pare quando tiver terminado.", happy),
+        Phrase("O que você pode fazer agora que tem o maior impacto sobre o seu sucesso?", happy),
+        Phrase("A melhor maneira de prever o futuro é inventá-lo.", sunny),
+        Phrase("É sobre viver os sonhos e não os medos!",sunny),
+        Phrase("Ter luz não é sobre brilhar, é sobre iluminar!",sunny),
+        Phrase("Direção é mais importante que velocidade.",sunny),
+        Phrase("Você perde todas as chances que você não aproveita.", sunny),
+        Phrase("Fracasso é o condimento que dá sabor ao sucesso.", sunny),
+        Phrase(" Enquanto não estivermos comprometidos, haverá hesitação!", sunny),
+        Phrase("Se você não sabe onde quer ir, qualquer caminho serve.", sunny),
+        Phrase("Se você acredita, faz toda a diferença.", sunny),
+        Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny)
+    )
+    fun getPhrases():String{
+        return "----------"
+
+    }
+
+}

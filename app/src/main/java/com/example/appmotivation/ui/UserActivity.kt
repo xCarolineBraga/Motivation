@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.appmotivation.AppConstants
+import com.example.appmotivation.constants.AppConstants
 import com.example.appmotivation.R
 import com.example.appmotivation.databinding.ActivityUserBinding
 import com.example.appmotivation.helper.SecurityPreferences
@@ -34,11 +34,21 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         setListeners()
+        verifyUserName()
     }
 
     override fun onClick(v: View) {
         if (v.id == R.id.button_save) {
             handleSave()
+        }
+    }
+    private fun verifyUserName(){
+        // função criada para finalizar a tela caso o nome ja tenha isso salvo.
+        //por isso é usado o métd 'getString' que é o que recupera o nome salvo
+        val nome = securityPreferences.getString(AppConstants.Key.PERSON_NAME)
+        if (nome.isNotEmpty()){
+            startActivity(Intent(this,PhrasesActivity::class.java))
+            finish()
         }
     }
 
@@ -50,9 +60,9 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
             securityPreferences.storeString(AppConstants.Key.PERSON_NAME,nome)
             //salvando o nome
 
-            val intent = Intent(this,PhrasesActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,PhrasesActivity::class.java))
             finish()
+            //trecho forte candidato para virar uma função pois tem repetição
 
 
         }else{

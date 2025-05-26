@@ -6,7 +6,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.appmotivation.AppConstants
+import com.example.appmotivation.PhraseRepository
+import com.example.appmotivation.constants.AppConstants
 import com.example.appmotivation.R
 import com.example.appmotivation.databinding.ActivityPhrasesBinding
 import com.example.appmotivation.helper.SecurityPreferences
@@ -16,6 +17,7 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityPhrasesBinding
     private lateinit var securityPreferences: SecurityPreferences
+    private var phraseRepository = PhraseRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +33,10 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         setListeners()
         getUserName()
+        refreshPhrase()
     }
 
 
@@ -43,8 +47,13 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    private fun refreshPhrase(){
+       binding.textViewFrases.text =  phraseRepository.getPhrases()
+    }
+
     private fun handleNewPhrase() {
         // lidar com gerador de frases
+
 
     }
 
