@@ -1,5 +1,6 @@
 package com.example.appmotivation.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -7,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.appmotivation.AppConstants
 import com.example.appmotivation.R
 import com.example.appmotivation.databinding.ActivityUserBinding
 import com.example.appmotivation.helper.SecurityPreferences
@@ -37,6 +39,12 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
             if (nome.isNotEmpty()){
 
                 handleSave()
+                SecurityPreferences(this).storeString("Motivation",nome)
+
+                val intent = Intent(this,PhrasesActivity::class.java)
+                intent.putExtra(AppConstants.KEY_NAME,nome)
+                startActivity(intent)
+
 
             }else{
                 Toast.makeText(this,R.string.name_notification,Toast.LENGTH_SHORT).show()
