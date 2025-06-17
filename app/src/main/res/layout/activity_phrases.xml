@@ -7,9 +7,10 @@
     tools:context=".ui.PhrasesActivity">
 
     <View
+        android:padding="56dp"
         android:id="@+id/view_backgroundTitle"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="164dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"

@@ -1,10 +1,12 @@
 package com.example.appmotivation.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appmotivation.PhraseRepository
 import com.example.appmotivation.constants.AppConstants
@@ -23,16 +25,17 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+
         binding = ActivityPhrasesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         securityPreferences = SecurityPreferences(this)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+      /*  ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
+        }*/
 
         setListeners()
         getUserName()
@@ -47,8 +50,8 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun refreshPhrase(){
-       binding.textViewFrases.text =  phraseRepository.getPhrases()
+    private fun refreshPhrase() {
+        binding.textViewFrases.text = phraseRepository.getPhrases()
     }
 
     private fun handleNewPhrase() {
@@ -64,7 +67,7 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun getUserName() {
         // função para recuperação de intents
-       val nome = securityPreferences.getString(AppConstants.Key.PERSON_NAME)
+        val nome = securityPreferences.getString(AppConstants.Key.PERSON_NAME)
         binding.textViewName.text = nome
 
     }
