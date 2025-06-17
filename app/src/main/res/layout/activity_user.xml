@@ -1,48 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.UserActivity"
-    android:background="@color/BlueDaises">
+    android:background="@color/BlueDaises"
+    android:orientation="vertical"
+    tools:context=".ui.UserActivity">
 
     <TextView
         android:id="@+id/textView_begin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/phrase_inity"
-        android:textSize="32sp"
-        android:gravity="center"
         android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="@string/phrase_inity"
         android:textColor="@color/white"
-        />
+        android:textSize="32sp" />
 
-   <EditText
-       android:id="@+id/editText_name"
-       android:inputType="text"
-       android:autofillHints="name"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-      android:layout_centerVertical="true"
-       android:hint="@string/nome"
-       android:gravity="center"
-       android:layout_margin="16dp"
-       android:textColorHint="@color/white"
-       android:textSize="20sp"
-       />
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        android:autofillHints="name"
+        android:gravity="center"
+        android:hint="@string/nome"
+        android:inputType="text"
+        android:textColorHint="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_salvar"
-        android:textColor="@color/BlueDaises"
-       android:backgroundTint="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="38dp"/>
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/button_salvar"
+        android:textColor="@color/BlueDaises" />
 
-  </RelativeLayout>
+</RelativeLayout>
