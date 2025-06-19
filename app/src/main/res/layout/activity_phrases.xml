@@ -7,20 +7,21 @@
     tools:context=".ui.PhrasesActivity">
 
     <View
-        android:padding="56dp"
         android:id="@+id/view_backgroundTitle"
         android:layout_width="match_parent"
-        android:layout_height="174dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:background="@color/BlueDaises" />
+        android:background="@color/BlueDaises"
+        android:padding="56dp" />
 
     <ImageView
         android:id="@+id/imageView_icAll"
         android:layout_width="30dp"
         android:layout_height="30dp"
-       android:layout_marginTop="115dp"
+        android:layout_alignTop="@id/view_backgroundTitle"
+        android:layout_alignBottom="@id/view_backgroundTitle"
         android:layout_marginStart="32dp"
         android:contentDescription="@string/ic_infinito"
         android:src="@drawable/ic_infinity" />
@@ -29,7 +30,8 @@
         android:id="@+id/imageView_icSmile"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="115dp"
+        android:layout_alignTop="@id/view_backgroundTitle"
+        android:layout_alignBottom="@id/view_backgroundTitle"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/ic_smile"
         android:src="@drawable/ic_smile" />
@@ -38,8 +40,9 @@
         android:id="@+id/imageView_icSunny"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="115dp"
+        android:layout_alignTop="@id/view_backgroundTitle"
         android:layout_alignEnd="@id/view_backgroundTitle"
+        android:layout_alignBottom="@id/view_backgroundTitle"
         android:layout_marginEnd="32dp"
         android:contentDescription="@string/ic_sun"
         android:src="@drawable/ic_sun" />
@@ -59,12 +62,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="32dp"
-        android:text="@string/Frase"
-        android:gravity="center"
         android:layout_margin="12dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/Frase"
         android:textStyle="bold|italic" />
-
 
 
     <View
@@ -73,9 +75,9 @@
         android:layout_height="3dp"
         android:layout_below="@id/textView_Frases"
         android:layout_centerHorizontal="true"
-        android:background="@color/BlueDaises"
         android:layout_marginTop="6dp"
-        android:elevation="4dp"/>
+        android:background="@color/BlueDaises"
+        android:elevation="4dp" />
 
     <Button
         android:id="@+id/button_new"
@@ -84,10 +86,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="36dp"
-        android:text="@string/button_new"
-        android:textSize="12sp"
         android:backgroundTint="@color/BlueDaises"
-        />
+        android:text="@string/button_new"
+        android:textSize="12sp" />
 
 
 </RelativeLayout>

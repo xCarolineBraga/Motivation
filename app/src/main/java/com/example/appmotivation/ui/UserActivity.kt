@@ -16,6 +16,9 @@ import com.example.appmotivation.helper.SecurityPreferences
 class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityUserBinding
+
+    //variável criada para instânciar a classe auxiliar que foi criada para modularizar as funcionalidades
+
     private lateinit var securityPreferences: SecurityPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +45,9 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
             handleSave()
         }
     }
+
     private fun verifyUserName(){
+
         // função criada para finalizar a tela caso o nome ja tenha isso salvo.
         //por isso é usado o métd 'getString' que é o que recupera o nome salvo
         val nome = securityPreferences.getString(AppConstants.Key.PERSON_NAME)

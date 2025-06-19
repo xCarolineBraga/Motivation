@@ -1,14 +1,18 @@
-package com.example.appmotivation
+package com.example.appmotivation.repository
 
 import com.example.appmotivation.constants.AppConstants
+import kotlin.random.Random
 
 data class Phrase(val description: String, val category: Int)
 
 class PhraseRepository {
 
+    //categorias para as frases.Por ser uma informação sensivel, foram criadas constantes
     private val all = AppConstants.Phrases.ALL
     private val happy = AppConstants.Phrases.SMILE
     private val sunny = AppConstants.Phrases.SUNNY
+
+    // variável criada para receber a lista de frases
 
     private val listPhrase: List<Phrase> = listOf(
         Phrase("Não sabendo que era impossível, foi lá e fez.", happy),
@@ -30,9 +34,12 @@ class PhraseRepository {
         Phrase("Se você acredita, faz toda a diferença.", sunny),
         Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny)
     )
-    fun getPhrases():String{
-        return "----------"
 
+    // metodo criado para criar um range das frases
+    fun getPhrases(filter:Int):String{
+      val filtered = listPhrase.filter { it.category == filter || filter == all }
+        val rand = Random.nextInt(filtered.size)
+        return filtered[rand].description
     }
 
 }
