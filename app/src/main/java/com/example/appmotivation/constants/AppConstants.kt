@@ -9,5 +9,6 @@ class AppConstants private constructor(){
         const val ALL = 0
         const val SMILE = 1
         const val SUNNY = 2
+
     }
 }
