@@ -20,7 +20,8 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var securityPreferences: SecurityPreferences
     private val phraseRepository = PhraseRepository()
 
-    // variável criada aqui pois será utilizada por mais de 1 metodo, por isso o escopo precisa ser ampliado
+    // variável criada aqui pois será utilizada por mais de 1 metodo,
+    // por isso o escopo precisa ser ampliado
     // foi atribuida uma constante por ser uma informação sensível
     private var filter = AppConstants.Phrases.ALL
 
@@ -40,7 +41,7 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // metodos criados para modularizar o funcionamento do app
+
         setListeners()
         getUserName()
 
