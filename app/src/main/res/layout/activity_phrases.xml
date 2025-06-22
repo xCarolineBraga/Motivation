@@ -23,7 +23,7 @@
         android:layout_alignTop="@id/view_backgroundTitle"
         android:layout_alignBottom="@id/view_backgroundTitle"
         android:layout_marginStart="32dp"
-        android:contentDescription="@string/ic_infinito"
+        android:contentDescription="@string/label_phrases_all"
         android:src="@drawable/ic_infinity" />
 
     <ImageView
@@ -33,7 +33,7 @@
         android:layout_alignTop="@id/view_backgroundTitle"
         android:layout_alignBottom="@id/view_backgroundTitle"
         android:layout_centerHorizontal="true"
-        android:contentDescription="@string/ic_smile"
+        android:contentDescription="@string/label_phrases_motivation"
         android:src="@drawable/ic_smile" />
 
     <ImageView
