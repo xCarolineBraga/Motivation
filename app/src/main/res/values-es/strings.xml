@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motivación</string>
+
+    <string name="button_save">ahorrar</string>
+    <string name="button_new_phrase">Nueva frase</string>
+
+    <string name="hint_your_name">¿Cómo te llamas?</string>
+
+    <string name="label_user">usuario</string>
+    <string name="label_phrase">frase</string>
+    <string name="label_lets_begin">¿Empezamos?</string>
+    <string name="label_phrases_all">Todas las frases</string>
+    <string name="label_phrases_motivation">Frases motivacionales</string>
+    <string name="label_phrases_morning">Frase matutina</string>
+    <string name="label_greeting_user">Hola, %1$s!</string>
+
+    <string name="error_mandatory_name">Por favor proporcione su nombre.</string>
+</resources>

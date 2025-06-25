@@ -10,7 +10,7 @@
     <string name="hint_your_name">Qual é o seu nome?</string>
     <string name="button_save">SALVAR</string>
     <string name="error_mandatory_name">Informe seu nome!</string>
-    <string name="label_user">User</string>
+    <string name="label_user">Usuário</string>
 </resources>
 
 
