@@ -32,7 +32,16 @@ class PhraseRepository {
         Phrase(" Enquanto não estivermos comprometidos, haverá hesitação!", sunny),
         Phrase("Se você não sabe onde quer ir, qualquer caminho serve.", sunny),
         Phrase("Se você acredita, faz toda a diferença.", sunny),
-        Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny)
+        Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", sunny),
+        Phrase("Sin saber que era imposible, siguió adelante y lo hizo.", happy),
+        Phrase("Las cosas grandes están hechas de muchas cosas pequeñas.", happy),
+        Phrase("Si arriesgas la felicidad, arriésgate", happy),
+        Phrase("No estás derrotado cuando pierdes, ¡estás derrotado cuando te rindes!",happy),
+        Phrase("¡Cuando está más oscuro, vemos más estrellas!",happy),
+        Phrase("La locura es repetir lo mismo una y otra vez y esperar un resultado diferente.",happy),
+
+
+
     )
 
     // metodo criado para criar um range das frases
