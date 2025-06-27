@@ -12,6 +12,7 @@ import com.example.appmotivation.constants.AppConstants
 import com.example.appmotivation.R
 import com.example.appmotivation.databinding.ActivityPhrasesBinding
 import com.example.appmotivation.helper.SecurityPreferences
+import java.util.Locale
 
 
 class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
@@ -72,7 +73,7 @@ class PhrasesActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun refreshPhrase() {
         // lidar com gerador de frases
-        binding.textViewFrases.text = phraseRepository.getPhrases(filter)
+        binding.textViewFrases.text = phraseRepository.getPhrases(filter, Locale.getDefault().language)
     }
 
     private fun handleFilter(id: Int) {

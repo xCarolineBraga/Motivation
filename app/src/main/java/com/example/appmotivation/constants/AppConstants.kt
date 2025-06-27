@@ -12,4 +12,9 @@ class AppConstants private constructor(){
         const val SUNNY = 2
 
     }
+    object LANGUAGE {
+        const val PORTUGUESE = "pt"
+        const val ENGLISH = "en"
+        const val SPANISH = "es"
+    }
 }
