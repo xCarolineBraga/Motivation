@@ -71,7 +71,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
 
         }else{
-            Toast.makeText(this,R.string.name_notification,Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,R.string.error_mandatory_name,Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -127,13 +127,17 @@ class PhraseRepository {
 
 
     fun getPhrases(filter: Int, language: String): String {
+        //verificação se a lingua selecionada no sistema está de acorda com a tradução de frases que
+        // possuo. Caso nã esteja, foi definido uma lingua padrão.
+
         var langFilter = language.lowercase()
         if (language !in listOf(langEn, langPt, langEs)) {
             langFilter = AppConstants.LANGUAGE.PORTUGUESE
         }
+
 // metodo criado para criar um range das frases
         val filtered =
-            listPhrase.filter { (it.category == filter || filter == all) && it.language == language }
+            listPhrase.filter { (it.category == filter || filter == all) && it.language == langFilter }
         val rand = Random.nextInt(filtered.size)
         return filtered[rand].description
     }
